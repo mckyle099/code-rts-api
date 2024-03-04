@@ -1,0 +1,331 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Code.RTS() API Reference &#8212; Code.RTS() 0.0.0.1 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/classic.css" />
+    
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="nav-item nav-item-0"><a href="#">Code.RTS() 0.0.0.1 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Code.RTS() API Reference</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="code-rts-api-reference">
+<h1>Code.RTS() API Reference<a class="headerlink" href="#code-rts-api-reference" title="Permalink to this heading">¶</a></h1>
+<p><strong>Code.RTS()</strong> is a video game that uses a Python API that players must use to play the game.
+test2</p>
+<section id="buildings">
+<h2>Buildings<a class="headerlink" href="#buildings" title="Permalink to this heading">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="buildCamp">
+<span class="sig-name descname"><span class="pre">buildCamp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">position</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#buildCamp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Builds a Camp at specified position. Camps generate population and provide additional population capacity.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>position</strong> (<em>int</em>) – A value between 1 and 9 that specifies the position to build the building.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>True on success, False on failure.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+<dt class="field-even">Population<span class="colon">:</span></dt>
+<dd class="field-even"><p>-5</p>
+</dd>
+<dt class="field-odd">Population Production<span class="colon">:</span></dt>
+<dd class="field-odd"><p>1</p>
+</dd>
+<dt class="field-even">Population Capacity<span class="colon">:</span></dt>
+<dd class="field-even"><p>5</p>
+</dd>
+<dt class="field-odd">Health<span class="colon">:</span></dt>
+<dd class="field-odd"><p>10000</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="buildLumberCamp">
+<span class="sig-name descname"><span class="pre">buildLumberCamp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">position</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#buildLumberCamp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Builds a Lumber Camp at specified position. Lumber Camps generate wood and provide additional wood capacity.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>position</strong> (<em>int</em>) – A value between 1 and 9 that specifies the position to build the building.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>True on success, False on failure.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+<dt class="field-even">Population<span class="colon">:</span></dt>
+<dd class="field-even"><p>-5</p>
+</dd>
+<dt class="field-odd">Wood Production<span class="colon">:</span></dt>
+<dd class="field-odd"><p>10</p>
+</dd>
+<dt class="field-even">Wood Capacity<span class="colon">:</span></dt>
+<dd class="field-even"><p>500</p>
+</dd>
+<dt class="field-odd">Health<span class="colon">:</span></dt>
+<dd class="field-odd"><p>10000</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="buildMarket">
+<span class="sig-name descname"><span class="pre">buildMarket</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">position</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#buildMarket" title="Permalink to this definition">¶</a></dt>
+<dd><p>Builds a Market at specified position. Markets enable trading (buyPopulation, sellPopulation, buyWood, sellWood).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>position</strong> (<em>int</em>) – A value between 1 and 9 that specifies the position to build the building.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>True on success, False on failure.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+<dt class="field-even">Population<span class="colon">:</span></dt>
+<dd class="field-even"><p>-5</p>
+</dd>
+<dt class="field-odd">Wood<span class="colon">:</span></dt>
+<dd class="field-odd"><p>-400</p>
+</dd>
+<dt class="field-even">Health<span class="colon">:</span></dt>
+<dd class="field-even"><p>10000</p>
+</dd>
+<dt class="field-odd">Enables<span class="colon">:</span></dt>
+<dd class="field-odd"><p>buyPopulation, sellPopulation, buyWood, sellWood</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="buildTower">
+<span class="sig-name descname"><span class="pre">buildTower</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">position</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#buildTower" title="Permalink to this definition">¶</a></dt>
+<dd><p>Builds a Tower at specified position. Towers are defensive buildings that will attack enemies.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>position</strong> (<em>int</em>) – A value between 1 and 9 that specifies the position to build the building.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>True on success, False on failure.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+<dt class="field-even">Population<span class="colon">:</span></dt>
+<dd class="field-even"><p>-5</p>
+</dd>
+<dt class="field-odd">Wood<span class="colon">:</span></dt>
+<dd class="field-odd"><p>-400</p>
+</dd>
+<dt class="field-even">Health<span class="colon">:</span></dt>
+<dd class="field-even"><p>10000</p>
+</dd>
+<dt class="field-odd">Damage<span class="colon">:</span></dt>
+<dd class="field-odd"><p>10</p>
+</dd>
+<dt class="field-even">Range<span class="colon">:</span></dt>
+<dd class="field-even"><p>20</p>
+</dd>
+<dt class="field-odd">Attack Speed<span class="colon">:</span></dt>
+<dd class="field-odd"><p>1</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="units">
+<h2>Units<a class="headerlink" href="#units" title="Permalink to this heading">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="createArcher">
+<span class="sig-name descname"><span class="pre">createArcher</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#createArcher" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates an Archer unit. Archers are ranged units that will attack your enemies.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>True on success, False on failure.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+<dt class="field-odd">Population<span class="colon">:</span></dt>
+<dd class="field-odd"><p>-1</p>
+</dd>
+<dt class="field-even">Wood<span class="colon">:</span></dt>
+<dd class="field-even"><p>-2</p>
+</dd>
+<dt class="field-odd">Health<span class="colon">:</span></dt>
+<dd class="field-odd"><p>100</p>
+</dd>
+<dt class="field-even">Damage<span class="colon">:</span></dt>
+<dd class="field-even"><p>10</p>
+</dd>
+<dt class="field-odd">Range<span class="colon">:</span></dt>
+<dd class="field-odd"><p>10</p>
+</dd>
+<dt class="field-even">Attack Speed<span class="colon">:</span></dt>
+<dd class="field-even"><p>1</p>
+</dd>
+<dt class="field-odd">Movement Speed<span class="colon">:</span></dt>
+<dd class="field-odd"><p>5</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="intel">
+<h2>Intel<a class="headerlink" href="#intel" title="Permalink to this heading">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="getCurrentPopulation">
+<span class="sig-name descname"><span class="pre">getCurrentPopulation</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#getCurrentPopulation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets your current Population value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>How much Population you currently have.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="getPopulationCapacity">
+<span class="sig-name descname"><span class="pre">getPopulationCapacity</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#getPopulationCapacity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets your Population Capacity value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>How much Population Capacity you currently have.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="trading">
+<h2>Trading<a class="headerlink" href="#trading" title="Permalink to this heading">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="buyPopulation">
+<span class="sig-name descname"><span class="pre">buyPopulation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">amount</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#buyPopulation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets your Population Capacity value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>amount</strong> (<em>int</em>) – How much population you want to buy. Each Population costs 11 Gold.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>True if the trade succeeded, False otherwise.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+<dt class="field-even">Requirement<span class="colon">:</span></dt>
+<dd class="field-even"><p>Market</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="#">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Code.RTS() API Reference</a><ul>
+<li><a class="reference internal" href="#buildings">Buildings</a><ul>
+<li><a class="reference internal" href="#buildCamp"><code class="docutils literal notranslate"><span class="pre">buildCamp()</span></code></a></li>
+<li><a class="reference internal" href="#buildLumberCamp"><code class="docutils literal notranslate"><span class="pre">buildLumberCamp()</span></code></a></li>
+<li><a class="reference internal" href="#buildMarket"><code class="docutils literal notranslate"><span class="pre">buildMarket()</span></code></a></li>
+<li><a class="reference internal" href="#buildTower"><code class="docutils literal notranslate"><span class="pre">buildTower()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#units">Units</a><ul>
+<li><a class="reference internal" href="#createArcher"><code class="docutils literal notranslate"><span class="pre">createArcher()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#intel">Intel</a><ul>
+<li><a class="reference internal" href="#getCurrentPopulation"><code class="docutils literal notranslate"><span class="pre">getCurrentPopulation()</span></code></a></li>
+<li><a class="reference internal" href="#getPopulationCapacity"><code class="docutils literal notranslate"><span class="pre">getPopulationCapacity()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#trading">Trading</a><ul>
+<li><a class="reference internal" href="#buyPopulation"><code class="docutils literal notranslate"><span class="pre">buyPopulation()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/index.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="nav-item nav-item-0"><a href="#">Code.RTS() 0.0.0.1 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Code.RTS() API Reference</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2024, YPG.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 6.0.1.
+    </div>
+  </body>
+</html>
