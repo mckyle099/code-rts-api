@@ -163,13 +163,56 @@
 </dl>
 </dd></dl>
 
+<dl class="py function">
+<dt class="sig sig-object py" id="repairBuilding">
+<span class="sig-name descname"><span class="pre">repairBuilding</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">position</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amount</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#repairBuilding" title="Permalink to this definition">¶</a></dt>
+<dd><p>Repairs building at specified position. Costs 1 wood per HP.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>position</strong> (<em>int</em>) – A value between 1 and 9 that specifies the position of the building to repair.</p></li>
+<li><p><strong>amount</strong> (<em>int</em>) – A integer value for how much HP to repair.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>True on success, False on failure.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+<dt class="field-even">Wood<span class="colon">:</span></dt>
+<dd class="field-even"><p>-amount</p>
+</dd>
+<dt class="field-odd">Health<span class="colon">:</span></dt>
+<dd class="field-odd"><p>+amount</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="destroyBuilding">
+<span class="sig-name descname"><span class="pre">destroyBuilding</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">position</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#destroyBuilding" title="Permalink to this definition">¶</a></dt>
+<dd><p>Destroys building at specified position.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>position</strong> (<em>int</em>) – A value between 1 and 9 that specifies the position of the building to destroy.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>True on success, False on failure.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
 </section>
 <section id="units">
 <h2>Units<a class="headerlink" href="#units" title="Permalink to this heading">¶</a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="createArcher">
 <span class="sig-name descname"><span class="pre">createArcher</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#createArcher" title="Permalink to this definition">¶</a></dt>
-<dd><p>Creates an Archer unit. Archers are ranged units that will attack your enemies.</p>
+<dd><p>Creates an Archer. Archers are ranged units that will attack your enemies.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>True on success, False on failure.</p>
@@ -201,6 +244,41 @@
 </dl>
 </dd></dl>
 
+<dl class="py function">
+<dt class="sig sig-object py" id="createSpearman">
+<span class="sig-name descname"><span class="pre">createSpearman</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#createSpearman" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a Spearman. Spearmen are melee units that will attack your enemies.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>True on success, False on failure.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+<dt class="field-odd">Population<span class="colon">:</span></dt>
+<dd class="field-odd"><p>-1</p>
+</dd>
+<dt class="field-even">Wood<span class="colon">:</span></dt>
+<dd class="field-even"><p>-2</p>
+</dd>
+<dt class="field-odd">Health<span class="colon">:</span></dt>
+<dd class="field-odd"><p>100</p>
+</dd>
+<dt class="field-even">Damage<span class="colon">:</span></dt>
+<dd class="field-even"><p>10</p>
+</dd>
+<dt class="field-odd">Range<span class="colon">:</span></dt>
+<dd class="field-odd"><p>1</p>
+</dd>
+<dt class="field-even">Attack Speed<span class="colon">:</span></dt>
+<dd class="field-even"><p>2</p>
+</dd>
+<dt class="field-odd">Movement Speed<span class="colon">:</span></dt>
+<dd class="field-odd"><p>10</p>
+</dd>
+</dl>
+</dd></dl>
+
 </section>
 <section id="intel">
 <h2>Intel<a class="headerlink" href="#intel" title="Permalink to this heading">¶</a></h2>
@@ -219,15 +297,91 @@
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="getPopulationCapacity">
-<span class="sig-name descname"><span class="pre">getPopulationCapacity</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#getPopulationCapacity" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets your Population Capacity value.</p>
+<dt class="sig sig-object py" id="getMaxPopulation">
+<span class="sig-name descname"><span class="pre">getMaxPopulation</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#getMaxPopulation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets your Maximum Population capacity value.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>How much Population Capacity you currently have.</p>
+<dd class="field-odd"><p>How much Maximum Population capacity you currently have.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="getCurrentWood">
+<span class="sig-name descname"><span class="pre">getCurrentWood</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#getCurrentWood" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets your current Population value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>How much Population you currently have.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="getMaxWood">
+<span class="sig-name descname"><span class="pre">getMaxWood</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#getMaxWood" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets your Maximum Wood capacity value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>How much Maximum Wood capacity you currently have.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="getCurrentGold">
+<span class="sig-name descname"><span class="pre">getCurrentGold</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#getCurrentGold" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets your current Gold value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>How much Gold you currently have.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="getBuildingCurrentHealth">
+<span class="sig-name descname"><span class="pre">getBuildingCurrentHealth</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">position</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#getBuildingCurrentHealth" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the Health of the Building at the specified position.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>position</strong> (<em>int</em>) – A value between 1 and 9 that specifies the position of the building to get current health of.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>How much health the building currently has.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="getBuildingMaxtHealth">
+<span class="sig-name descname"><span class="pre">getBuildingMaxtHealth</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">position</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#getBuildingMaxtHealth" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the Maximum Health of the Building at the specified position.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>position</strong> (<em>int</em>) – A value between 1 and 9 that specifies the position of the building to get maximum health of.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>How much maximum health the building has.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
 </dd>
 </dl>
 </dd></dl>
@@ -238,10 +392,10 @@
 <dl class="py function">
 <dt class="sig sig-object py" id="buyPopulation">
 <span class="sig-name descname"><span class="pre">buyPopulation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">amount</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#buyPopulation" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets your Population Capacity value.</p>
+<dd><p>Buy Population for Gold.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>amount</strong> (<em>int</em>) – How much population you want to buy. Each Population costs 11 Gold.</p>
+<dd class="field-odd"><p><strong>amount</strong> (<em>int</em>) – How much Population you want to buy.</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>True if the trade succeeded, False otherwise.</p>
@@ -251,6 +405,90 @@
 </dd>
 <dt class="field-even">Requirement<span class="colon">:</span></dt>
 <dd class="field-even"><p>Market</p>
+</dd>
+<dt class="field-odd">Population<span class="colon">:</span></dt>
+<dd class="field-odd"><p>1 * amount</p>
+</dd>
+<dt class="field-even">Gold<span class="colon">:</span></dt>
+<dd class="field-even"><p>-11 * amount</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="sellPopulation">
+<span class="sig-name descname"><span class="pre">sellPopulation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">amount</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sellPopulation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sell Population for Gold.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>amount</strong> (<em>int</em>) – How much Population you want to sell.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>True if the trade succeeded, False otherwise.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+<dt class="field-even">Requirement<span class="colon">:</span></dt>
+<dd class="field-even"><p>Market</p>
+</dd>
+<dt class="field-odd">Population<span class="colon">:</span></dt>
+<dd class="field-odd"><p>-1 * amount</p>
+</dd>
+<dt class="field-even">Gold<span class="colon">:</span></dt>
+<dd class="field-even"><p>9 * amount</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="buyWood">
+<span class="sig-name descname"><span class="pre">buyWood</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">amount</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#buyWood" title="Permalink to this definition">¶</a></dt>
+<dd><p>Buy Wood for Gold.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>amount</strong> (<em>int</em>) – How much Wood you want to buy. Must be a multiple of 10. 10 Wood costs 11 Gold.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>True if the trade succeeded, False otherwise.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+<dt class="field-even">Requirement<span class="colon">:</span></dt>
+<dd class="field-even"><p>Market</p>
+</dd>
+<dt class="field-odd">Wood<span class="colon">:</span></dt>
+<dd class="field-odd"><p>10 * amount</p>
+</dd>
+<dt class="field-even">Gold<span class="colon">:</span></dt>
+<dd class="field-even"><p>-11 * amount</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="sellWood">
+<span class="sig-name descname"><span class="pre">sellWood</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">amount</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sellWood" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sell Wood for Gold.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>amount</strong> (<em>int</em>) – How much Wood you want to sell. Must be a multiple of 10.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>True if the trade succeeded, False otherwise.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+<dt class="field-even">Requirement<span class="colon">:</span></dt>
+<dd class="field-even"><p>Market</p>
+</dd>
+<dt class="field-odd">Wood<span class="colon">:</span></dt>
+<dd class="field-odd"><p>-10 * amount</p>
+</dd>
+<dt class="field-even">Gold<span class="colon">:</span></dt>
+<dd class="field-even"><p>9 * amount</p>
 </dd>
 </dl>
 </dd></dl>
@@ -274,19 +512,30 @@
 <li><a class="reference internal" href="#buildLumberCamp"><code class="docutils literal notranslate"><span class="pre">buildLumberCamp()</span></code></a></li>
 <li><a class="reference internal" href="#buildMarket"><code class="docutils literal notranslate"><span class="pre">buildMarket()</span></code></a></li>
 <li><a class="reference internal" href="#buildTower"><code class="docutils literal notranslate"><span class="pre">buildTower()</span></code></a></li>
+<li><a class="reference internal" href="#repairBuilding"><code class="docutils literal notranslate"><span class="pre">repairBuilding()</span></code></a></li>
+<li><a class="reference internal" href="#destroyBuilding"><code class="docutils literal notranslate"><span class="pre">destroyBuilding()</span></code></a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#units">Units</a><ul>
 <li><a class="reference internal" href="#createArcher"><code class="docutils literal notranslate"><span class="pre">createArcher()</span></code></a></li>
+<li><a class="reference internal" href="#createSpearman"><code class="docutils literal notranslate"><span class="pre">createSpearman()</span></code></a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#intel">Intel</a><ul>
 <li><a class="reference internal" href="#getCurrentPopulation"><code class="docutils literal notranslate"><span class="pre">getCurrentPopulation()</span></code></a></li>
-<li><a class="reference internal" href="#getPopulationCapacity"><code class="docutils literal notranslate"><span class="pre">getPopulationCapacity()</span></code></a></li>
+<li><a class="reference internal" href="#getMaxPopulation"><code class="docutils literal notranslate"><span class="pre">getMaxPopulation()</span></code></a></li>
+<li><a class="reference internal" href="#getCurrentWood"><code class="docutils literal notranslate"><span class="pre">getCurrentWood()</span></code></a></li>
+<li><a class="reference internal" href="#getMaxWood"><code class="docutils literal notranslate"><span class="pre">getMaxWood()</span></code></a></li>
+<li><a class="reference internal" href="#getCurrentGold"><code class="docutils literal notranslate"><span class="pre">getCurrentGold()</span></code></a></li>
+<li><a class="reference internal" href="#getBuildingCurrentHealth"><code class="docutils literal notranslate"><span class="pre">getBuildingCurrentHealth()</span></code></a></li>
+<li><a class="reference internal" href="#getBuildingMaxtHealth"><code class="docutils literal notranslate"><span class="pre">getBuildingMaxtHealth()</span></code></a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#trading">Trading</a><ul>
 <li><a class="reference internal" href="#buyPopulation"><code class="docutils literal notranslate"><span class="pre">buyPopulation()</span></code></a></li>
+<li><a class="reference internal" href="#sellPopulation"><code class="docutils literal notranslate"><span class="pre">sellPopulation()</span></code></a></li>
+<li><a class="reference internal" href="#buyWood"><code class="docutils literal notranslate"><span class="pre">buyWood()</span></code></a></li>
+<li><a class="reference internal" href="#sellWood"><code class="docutils literal notranslate"><span class="pre">sellWood()</span></code></a></li>
 </ul>
 </li>
 </ul>
